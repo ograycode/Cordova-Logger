@@ -32,6 +32,7 @@ var logger = {
 		function successCB() { }
 		var db = window.openDatabase(name, version, display_name, size);
 		db.transaction(populateDB, errorCB, successCB);
+		console.log('LOG Severity: ' + log_level + ' : ' + message);
 	},
 	log_level : {
 		ERROR : "ERROR",
