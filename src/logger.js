@@ -25,8 +25,8 @@ var logger = {
 	log : function (message, log_level) {
 		"use strict";
 		function populateDB(tx) {
-			tx.exectureSql('CREATE TABLE IF NOT EXISTS LOG (id INTEGER PRIMARY KEY AUTOINCREMENT, time TIMESTAMP DEFAULT CURRENT_TIMESTAMP, message TEXT, log_level TEXT)');
-			tx.exectureSql('INSERT INTO LOG (message, log_level) VALUES ("' + message + '", "' + log_level + '")');
+			tx.executeSql('CREATE TABLE IF NOT EXISTS LOG (id INTEGER PRIMARY KEY AUTOINCREMENT, time TIMESTAMP DEFAULT CURRENT_TIMESTAMP, message TEXT, log_level TEXT)');
+			tx.executeSql('INSERT INTO LOG (message, log_level) VALUES ("' + message + '", "' + log_level + '")');
 		}
 		function errorCB(err) { }
 		function successCB() { }
